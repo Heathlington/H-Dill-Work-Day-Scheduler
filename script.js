@@ -15,7 +15,15 @@ $(function () {
     localStorage.setItem(timeBlock, description)
   })
 
-
+$("#9").children("textarea").val(localStorage.getItem("9"))
+$("#10").children("textarea").val(localStorage.getItem("10"))
+$("#11").children("textarea").val(localStorage.getItem("11"))
+$("#12").children("textarea").val(localStorage.getItem("12"))
+$("#1").children("textarea").val(localStorage.getItem("1"))
+$("#2").children("textarea").val(localStorage.getItem("2"))
+$("#3").children("textarea").val(localStorage.getItem("3"))
+$("#4").children("textarea").val(localStorage.getItem("4"))
+$("#5").children("textarea").val(localStorage.getItem("5"))
 
   // TODO: Add code to apply the past, present, or future class to each time
   // block by comparing the id to the current hour. HINTS: How can the id
@@ -26,6 +34,7 @@ $(function () {
   var now = dayjs();
   console.log("Now: ", now.format());
   var currenthour = dayjs().hour();
+  const currentDate = dayjs().format('MM-DD-YYYY');
   //document.querySelectorAll();
   // what if we test against the current HOUR?
 
@@ -45,15 +54,13 @@ $(function () {
     }
 
   })
-
-
-
+  
   // TODO: Add code to get any user input that was saved in localStorage and set
   // the values of the corresponding textarea elements. HINT: How can the id
   // attribute of each time-block be used to do this?
   
 
   // TODO: Add code to display the current date in the header of the page.
-   
+  $("#currentDay").text(currentDate)
 
 });
